@@ -81,11 +81,11 @@ const LeftSideBar = () => {
                                                 <p className="font-medium truncate">{album.title}</p>
                                                 <p className="text-sm text-zinc-400 truncate">Album {album.artist}</p>
                                             </div>
-
+                                    
                                     </Link>
                                     
                                 ))
-                            )}
+                            )}                                                                                          
                         </div>
                 </ScrollArea>
             </div>
