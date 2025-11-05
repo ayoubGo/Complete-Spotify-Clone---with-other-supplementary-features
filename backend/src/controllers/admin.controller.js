@@ -108,4 +108,8 @@ export const deleteAlbum = async ( req, res , next) => {
         console.log("Error in deleteAlbum", error);
         next(error);
     }
-}
+};
+
+export const checkAdmin = async (req, res, next ) => {
+    res.status(200).json({admin: true});
+};

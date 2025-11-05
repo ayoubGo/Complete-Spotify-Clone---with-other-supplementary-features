@@ -21,7 +21,7 @@ function App() {
            <Route path="/chat" element={<ChatPage />}/>
            <Route path="/albums/:albumId" element={<AlbumPage/>}/>
     
-        </Route>
+        </Route> 
 
         <Route path="/auth-callback" element={<AuthCallBackPage />}/>
       </Routes>
