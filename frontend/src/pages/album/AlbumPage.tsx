@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-const formatDuration = (seconds : number) => {
+export const formatDuration = (seconds : number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSecounds = seconds % 60;
     return `${minutes}:${remainingSecounds.toString().padStart(2, "0")}`;
@@ -33,7 +33,7 @@ const AlbumPage = () => {
         if(isCurrentAlbumPlaying) togglePlay();
         else{
             // start playing the album from the beginning
-            playAlbum(playAlbum?.songs, 0); 
+            playAlbum(currentAlbum?.songs, 0); 
         }
     }
 
