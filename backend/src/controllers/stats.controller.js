@@ -8,7 +8,7 @@ export const getStats = async (req , res ,next) => {
             // const tolatUsers = await User.countDocuments();
             // const totalAlbums = await Album.countDocuments();
     
-            const [totalSongs, tolatUsers, totalAlbums, uniqueArtists] = await Promise.all([
+            const [totalSongs, totalUsers, totalAlbums, uniqueArtists] = await Promise.all([
                 Song.countDocuments(),
                 User.countDocuments(),
                 Album.countDocuments(),
@@ -35,7 +35,7 @@ export const getStats = async (req , res ,next) => {
             res.status(200).json({
                 totalAlbums,
                 totalSongs,
-                tolatUsers,
+                totalUsers,
                 totalArtists:  uniqueArtists[0]?.count || 0,
             })
         }catch(error){
