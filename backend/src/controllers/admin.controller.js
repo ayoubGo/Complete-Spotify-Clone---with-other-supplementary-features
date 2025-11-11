@@ -25,8 +25,8 @@ export const createSong = async (req, res, next) => {
         const audioFile = req.files.audioFile;
         const imageFile = req.files.imageFile;
 
-        const audioUrl = uploadToClodunary(audioFile);
-        const imageUrl = uploadToClodunary(imageFile);
+        const audioUrl = await uploadToClodunary(audioFile);
+        const imageUrl = await uploadToClodunary(imageFile);
 
         const song = new Song({
             title,
